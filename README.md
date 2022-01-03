@@ -4,8 +4,8 @@
 ### Prequesit
 - zsh
 - [spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
-- [neofetch](https://github.com/dylanaraps/neofetch)
-- [powerline font](https://github.com/powerline/fonts)
+- [powerline font](https://github.com/powerline/fonts) or [nerdfonts](https://www.nerdfonts.com/font-downloads)
+- [homebrew](https://brew.sh/)
 -  plugins
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
