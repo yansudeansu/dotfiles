@@ -19,7 +19,7 @@
 ### Spaceship
 
 ```
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git --depth=1 /usr/share/zsh/site-functions/prompt_spaceship_setup
+brew install spaceship
 ```
 
 ---
