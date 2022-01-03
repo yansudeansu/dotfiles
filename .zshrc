@@ -1,5 +1,3 @@
-neofetch
-
 ## nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -14,10 +12,10 @@ compinit
 _comp_options+=(globdots) # Includes hidden files
 
 # plugins
-source ~/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source ~/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source ~/usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
-source ~/usr/share/zsh/plugins/zsh-auto-nvm-use/zsh-auto-nvm-use.plugin.zsh 2>/dev/null
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source ~/.zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
+source ~/.zsh/plugins/zsh-auto-nvm-use/zsh-auto-nvm-use.plugin.zsh 2>/dev/null
 
 # spaceship
 SPACESHIP_PROMPT_ADD_NEWLINE=false

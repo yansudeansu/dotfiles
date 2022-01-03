@@ -27,25 +27,25 @@ git clone https://github.com/spaceship-prompt/spaceship-prompt.git --depth=1 /us
 ### zsh-autosuggestions
 
 ```
-git clone https://github.com/zsh-users/zsh-autosuggestions /usr/share/zsh/plugins/
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
 ```
 
 ---
 ### zsh-syntax-highlighting
 
 ```
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/plugins/zsh-syntax-highlighting
 ```
 
 ---
 ### zsh-you-should-use
 
 ```
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git /usr/share/zsh/plugins/
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/.zsh/plugins/zsh-you-should-use
 ```
 ---
 ### zsh-auto-nvm-use
 
 ```
-git clone https://github.com/Sparragus/zsh-auto-nvm-use /usr/share/zsh/plugins
+git clone https://github.com/Sparragus/zsh-auto-nvm-use ~/.zsh/plugins/zsh-auto-nvm-use
 ```
