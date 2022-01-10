@@ -1,21 +1,46 @@
-## nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-autoload -U compinit && compinit -u
-zstyle ':completion:* ' menu select
+autoload -U compinit && compinit -i
+zstyle ':completion:*' menu select
 # autocomplete with case insensitive
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*''1:|=* r:|=*'
+zstyle ':completion:*:' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-zmodload zsh/complist
+zmodload zsh/complete
 compinit
-_comp_options+=(globdots) # Includes hidden files
+_comp_options+=(globdots)
 
-# plugins
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source ~/.zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
-source ~/.zsh/plugins/zsh-auto-nvm-use/zsh-auto-nvm-use.plugin.zsh 2>/dev/null
+# keybind
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word
+bindkey '^R' history-incremental-pattern-search-backward
+
+# source plugins
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+source ~/.config/zsh/plugins/zsh-auto-nvm-use/zsh-auto-nvm-use.plugin.zsh
+
+# load aliases
+eval $(thefuck --alias)
+for f in ~/.config/zsh/aliases/*; do source "$f"; done
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[0 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+precmd() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # spaceship
 SPACESHIP_PROMPT_ADD_NEWLINE=false
@@ -51,7 +76,8 @@ SPACESHIP_HOST_SHOW_FULL=false
 SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_EXEC_TIME_SHOW=false
 
+# symlink
+fpath=( "$HOMEBREW_PREFIX/share/zsh/site-functions" $fpath )
 # initialize spaceship
 autoload -U promptinit; promptinit
 prompt spaceship
-
