@@ -1,0 +1,23 @@
+Foreground: #c3cfe0
+Background: #272c34
+[x] Bold: #b9bfca
+Links: #16affe
+[x] Brighten bold text
+Selection: #3e464e
+Selected text: #c2d0e0
+Badge: #ff2600 50%?
+
+Black: #3e4352 #6f7683
+Red: #f1475d #f0475d
+Green: #92e364 #91e364
+Yellow: #db8c44 #db8c44
+Blue: #17afff #17afff
+Magenta: #d77adf #d77adf
+Cyan: #00d1df #01d0df
+White: #b9bfca #fefefe
+
+Cursor: #c7c7c7
+Cursor text: #feffff
+Cursor guide: #b3ecff 25%
+
+Font DroidSansMono Nerd Font
