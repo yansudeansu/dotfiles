@@ -13,6 +13,7 @@
   - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
   - [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
   - [zsh-auto-nvm-use](https://github.com/Sparragus/zsh-auto-nvm-use)
+  - [dotenv](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dotenv)
 
 ---
 

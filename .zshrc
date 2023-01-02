@@ -32,6 +32,7 @@ ZSH_DOTENV_DISALLOWED_LIST=~/.config/zsh/plugins/zsh-dotenv/disallowed/list
 
 # load aliases
 eval $(thefuck --alias)
+alias ofd='open $PWD'
 # for f in ~/.config/zsh/aliases/*; do source "$f"; done
 
 # Change cursor shape for different vi modes.
