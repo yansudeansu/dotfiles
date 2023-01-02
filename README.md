@@ -6,8 +6,8 @@
 
 - zsh
 - [spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
-- [powerline font](https://github.com/powerline/fonts) or [nerdfonts](https://www.nerdfonts.com/font-downloads)
 - [homebrew](https://brew.sh/)
+- [droidsansmono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/DroidSansMono.zip)
 - plugins
   - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
   - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
