@@ -1,3 +1,6 @@
+# git in english
+# alias git='LANG=en_US.UTF-8 git'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -19,12 +22,17 @@ bindkey '^R' history-incremental-pattern-search-backward
 # source plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/plugins/zsh-auto-nvm-use/zsh-auto-nvm-use.plugin.zsh
+source ~/.config/zsh/plugins/zsh-iterm-tab-color/iterm-tab-color.plugin.zsh
+source ~/.config/zsh/plugins/zsh-dotenv/dotenv.plugin.zsh
+
+# dotenv plugin allowd/disallowed
+ZSH_DOTENV_ALLOWED_LIST=~/.config/zsh/plugins/zsh-dotenv/allowed/list
+ZSH_DOTENV_DISALLOWED_LIST=~/.config/zsh/plugins/zsh-dotenv/disallowed/list
 
 # load aliases
 eval $(thefuck --alias)
-for f in ~/.config/zsh/aliases/*; do source "$f"; done
+# for f in ~/.config/zsh/aliases/*; do source "$f"; done
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -41,6 +49,11 @@ function zle-keymap-select {
 
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 precmd() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+# Fix nordic characters
+stty -istrip
+LANG=sv_SE.UTF-8
+export LANG
 
 # spaceship
 SPACESHIP_PROMPT_ADD_NEWLINE=false
